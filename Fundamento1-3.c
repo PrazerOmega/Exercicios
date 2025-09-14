@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+/*calculadora padrao*/
 int main(void){
     int num1, num2, choice;
 

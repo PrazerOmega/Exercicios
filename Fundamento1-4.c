@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+/*fatoracao de numero*/
 
 int factory(int num1);
 

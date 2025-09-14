@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+/*Le input e diz se é par ou impar*/
 int main(void){
     int num;
 

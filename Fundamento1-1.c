@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/*Le dois numeros e mostra soma,subtracao,multiplicacao e divisao*/
+
 int main(void){
 
     int num1, num2;
