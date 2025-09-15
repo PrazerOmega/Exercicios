@@ -1,42 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*le 10 numeros em um array e calcula a media*/
+
 int main(void){
 
-    size_t rangeMatriz;
-    int matriz[3][3], sum = 0;
-    int lenL = sizeof(matriz) / sizeof(matriz[0]);
-    int lenC = sizeof(matriz[0]) / sizeof(matriz[0][0]); 
+    size_t holderInt = 0;
+    int sum = 0;
+    int media = 0;
 
-    printf("Quantos numeros voce deseja acresentar na matrix?\n");
-    scanf("%zu", &rangeMatriz);
+    printf("Qual o tamanho do array?\n");
+    scanf("%zu", &holderInt);
+    
+    int *sizeArray = malloc(holderInt * sizeof(int));
 
-    for (size_t i = 0; i < lenL; i++)
+    if (sizeArray == NULL)
     {
-        for (size_t j = 0; j < lenC; j++)
-        {
-            printf("Informe os numeros a serem preenchidos da matrix no espaco %d-%d\n",i+1,j+1);
-            scanf("%d",&matriz[i][j]);
-        }
-        
+        printf("Retorno NULL, não foi possivel a alocacao");
+    }else if(holderInt == 0){
+        printf("Valor do array invalido!");
+        return 1;
     }
 
-    printf("Segue matriz:\n");
-    for (size_t i = 0; i < lenL; i++)
+    
+    size_t len = holderInt;
+
+    printf("Preencha o array de tamanho %zu\n", holderInt);
+
+    for (size_t i = 0; i < len; i++)
     {
-        for (size_t j = 0; j < lenC; j++)
-        {
-        printf("%d ",matriz[i][j]);
-        }
-        printf("\n");
+        printf(">%zu.", i+1);
+        scanf("%d", &sizeArray[i]);
+        sum += sizeArray[i];
     }
+    
+    media = sum/holderInt;
+    printf("A media e %d", media);
+    
 
-    for (size_t i = 0; i < lenC; i++)
-    {
-        sum += matriz[i][i];
-    }
-
-    printf("A soma e : %d", sum);
-
+    free(sizeArray);
     return 0;
 }
