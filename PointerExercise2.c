@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/*Funcao de dobrar o numero*/
+
 void dobrar(int *num);
 
 int main(void){

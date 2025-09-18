@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/*Função de swap dois numeros*/
+
 void swap(int *num1, int *num2);
 
 int main(void){

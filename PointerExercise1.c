@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//imprimir valor de uma variavel e troca-la usando ponteiro
+
 int main(void){
     int x = 42;
     int *Px = &x;
