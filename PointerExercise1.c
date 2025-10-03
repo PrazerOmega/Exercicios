@@ -13,7 +13,7 @@ int main(void){
 
     *Px = 99;
 
-    printf("%d\n", x);
+    printf("%d\n", *Px);
 
     return 0;
 }
