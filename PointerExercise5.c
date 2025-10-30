@@ -2,6 +2,8 @@
 #include <string.h>
 #define BUFFER 100
 
+/*Criar a função strlen*/
+
 size_t my_strlen(const char *s);
 
 int main(void){
