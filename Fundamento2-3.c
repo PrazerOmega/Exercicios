@@ -1,50 +1,39 @@
 #include <stdio.h>
-#include <string.h>
-#include <locale.h>
-#include <ctype.h>
 
-/*verificar se a palavra e um paldromo*/
+/*cria uma matrix 3x3, pede para preenche-la e soma as valores nos slots 1-1, 2-2, 3-3*/
 
 int main(void){
- setlocale(LC_ALL,"Portuguese_Brazil.1252");
 
-    char palavra[100];
-    char Inverso[100];
+    int matriz[3][3], sum = 0;
+    int lenL = sizeof(matriz) / sizeof(matriz[0]);
+    int lenC = sizeof(matriz[0]) / sizeof(matriz[0][0]); 
 
-    printf("Digite a palavra: ");
-    fgets(palavra, sizeof(palavra), stdin);
-    palavra[strcspn(palavra, "\n")] = '\0';
-    size_t len = strlen(palavra);
-    Inverso[len] = '\0';
-
-
-    for (size_t i = 0; i < len; i++)
+    for (size_t i = 0; i < lenL; i++)
     {
-        palavra[i] = tolower((unsigned char)palavra[i]);
-    }
-    
-
-    for (size_t i = 0, j = len-1; i < len; i++)
-    {
-        Inverso[i] = palavra[j];
-        j--;
-    }
-    
-   /* for (size_t i = 0; i < len; i++)
-    {
-        printf("%c",palavra[i]);
+        for (size_t j = 0; j < lenC; j++)
+        {
+            printf("Informe os numeros a serem preenchidos da matrix no espaco %d-%d\n",i+1,j+1);
+            scanf("%d",&matriz[i][j]);
+        }
+        
     }
 
-    for (size_t i = 0; i < len; i++)
+    printf("Segue matriz:\n");
+    for (size_t i = 0; i < lenL; i++)
     {
-        printf("%c",Inverso[i]);
-    }*/
-    
-   if(strcmp(palavra, Inverso) == 0){
-    printf("A palavra %s é um palidromo", palavra);
-   }else{
-    printf("A palavra %s não é um palidromo", palavra);
-   }
-    
+        for (size_t j = 0; j < lenC; j++)
+        {
+        printf("%d ",matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    for (size_t i = 0; i < lenC; i++)
+    {
+        sum += matriz[i][i];
+    }
+
+    printf("A soma e : %d", sum);
+
     return 0;
 }

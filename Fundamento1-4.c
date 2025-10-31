@@ -1,7 +1,7 @@
 #include <stdio.h>
 /*fatoracao de numero*/
 
-int factory(int num1);
+int factorial(int num1);
 
 
 int main(void){

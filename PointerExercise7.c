@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <windows.h>
 
+/*Exercicio testando realloc*/
+
 int main(void) {
 
 int *array = NULL, *tempArray = NULL;

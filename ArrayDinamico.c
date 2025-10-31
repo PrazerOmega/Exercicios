@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/*Ponteiro dinamico*/
 /*le 10 numeros em um array e calcula a media*/
 
 int main(void){

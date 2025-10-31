@@ -18,7 +18,7 @@ int main(void){
     printf("Digite o numero total de colunas: ");
     scanf("%d", &y);
 
-    matriz = malloc(x * sizeof(int));
+    matriz = malloc(x * sizeof(int*));
     if (matriz == NULL)
     {
         perror("Erro ao alocar memoria!");
@@ -26,7 +26,7 @@ int main(void){
     }
     
     for(size_t i = 0; i < x; i++){
-    matriz[i] = malloc(y * sizeof(int));
+    matriz[i] = malloc(y * sizeof(int*));
     if (matriz[i] == NULL)
     {
         perror("Erro ao alocar memoria");
@@ -47,16 +47,18 @@ for (size_t i = 0; i < x; i++)
     }
 }
 
+printf("Segue matriz:\n\n");
 for (size_t i = 0; i < x; i++)
 {
-    for (size_t j = 0; i < y; y++)
+    for (size_t j = 0; j < y; j++)
     {
-        printf("Matriz:\n%d", matriz[i][j]);
+        printf("%d ", matriz[i][j]);
     }
-    
+    printf("\n");
 }
 
-for (size_t i = 0; i < x; x++)
+
+for (size_t i = 0; i < x; i++)
 {
     free(matriz[x]);
 }
