@@ -1,9 +1,10 @@
+/*Implementação de strlen de maneira manual*/
+
 #include <stdio.h>
 #include <string.h>
 
 #define BUFFER 100
 
-/*Implementação de strlen de maneira manual*/
 
 size_t my_strlen(const char *s);
 

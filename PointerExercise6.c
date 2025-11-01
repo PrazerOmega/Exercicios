@@ -1,6 +1,6 @@
-#include <stdio.h>
+/*Encontrar o maior valor de um array usando ponteiros*/
 
-/*encontrar o maior valor de um array usando ponteiros*/
+#include <stdio.h>
 
 int main(void){
 

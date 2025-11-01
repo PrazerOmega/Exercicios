@@ -1,8 +1,9 @@
+/*Exercicio testando realloc*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
 
-/*Exercicio testando realloc*/
 
 int main(void) {
 
