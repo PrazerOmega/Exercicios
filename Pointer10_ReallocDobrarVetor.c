@@ -1,4 +1,4 @@
-/*Exercicio testando realloc*/
+/*Dobrar vetor com realloc mantendo dados*/
 
 #include <stdio.h>
 #include <stdlib.h>

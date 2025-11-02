@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*Percorrer um array usando ponteiro*/
+/*Percorrer um array usando ponteiro e soma*/
 
 int main(void){
 
