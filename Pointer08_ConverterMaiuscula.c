@@ -9,7 +9,7 @@ int main(void){
 
 char word[TAM];
 
-printf("Digite a palavra");
+printf("Digite a palavra\n");
 fgets(word, TAM, stdin);
 word[strcspn(word, "\n")] = '\0';
 uppercase(word);
@@ -21,12 +21,12 @@ printf("%s", word);
 }
 
 void uppercase(char *str){
-    int len = strlen(str);
+    
 
-    for (size_t i = 0; i < len; i++)
+    for (char *i = str; *i != '\0'; i++)
     {
-        if(&str[i] > 'a' && &str[i] < 'z'){
-            str[i] -= 32; 
+        if(*i >= 'a' && *i <= 'z'){
+            *i -= 32; 
         }
     }
 
