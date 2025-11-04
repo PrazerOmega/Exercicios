@@ -1,4 +1,4 @@
-/*Trocar duas strings via ponteiro*/
+/*Trocar dois endereços via ponteiro*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,20 +25,19 @@ printf("Escreva a segunda palavra:\n");
 fgets(sWord, TAM, stdin);
 sWord[strcspn(sWord, "\n")] = '\0';
 
-printf("Palavras:\n1-%s\n2-%s", *fWord, *sWord);
- swapString(*&fWord,*&sWord);
-printf("Palavras:\n1-%s\n2-%s", *fWord, *sWord);
+printf("Palavras:\n1-%s\n2-%s", fWord, sWord);
+ swapString(&fWord,&sWord);
+printf("Palavras:\n1-%s\n2-%s", fWord, sWord);
 
 
-
+free(fWord);
+free(sWord);
     return 0;
 }
 
 void swapString(char **str1, char **str2){
 
-    int size = strlen(TAM);
-
-    char temp = **str1;
-    **str1 = **str2;
-    **str2 = temp;
+    char *temp = *str1;
+    *str1 = *str2;
+    *str2 = temp;
 }
