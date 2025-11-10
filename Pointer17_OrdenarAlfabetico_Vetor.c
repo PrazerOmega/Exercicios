@@ -4,9 +4,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 #define TAM 100
 
-void alfabetico(char **vetor);
+void alfabetico(char **vetor,  int qntWords);
 
 int main(void){
 
@@ -22,7 +23,7 @@ int main(void){
         return 1;
     }
 
-    printf("Escreva as palavras");
+    printf("Escreva as palavras:\n");
 
     for (size_t i = 0; i < vetSize; i++)
     {
