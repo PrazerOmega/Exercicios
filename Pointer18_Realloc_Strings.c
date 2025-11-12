@@ -7,7 +7,9 @@
 int main(void){
 
  char *sentence = NULL;
+ char c;
  size_t Tam = 0;
+
 
 sentence = malloc(sizeof(char));
 
@@ -17,21 +19,22 @@ if (sentence == NULL)
     return  1;
 }
 
-Tam = sizeof(char);
-
+Tam = 0;
 printf("Digite os caracteres:\n");
 
-for(int i = 0; i != '\0'; i++){
 
-    if (scanf("%c", sentence[i]) != '\n')
-    {
-        sentence = realloc(sentence, Tam+=sizeof(char));
-    }
-    
-
+while ((c = getchar()) != '\n' && c != EOF)
+{
+    sentence = realloc(sentence, Tam+2);
+    sentence[Tam] = c;
+    Tam++;
+    sentence[Tam] = '\0';
 }
 
 
+printf("%s", sentence);
+
+free(sentence);
 
 
 
