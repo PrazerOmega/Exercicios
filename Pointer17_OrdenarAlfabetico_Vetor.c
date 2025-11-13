@@ -72,8 +72,7 @@ int main(void){
                       vetor[i] = temp;
                 }else{
                     continue;
-                }
-                
+                }   
             }
             
         }

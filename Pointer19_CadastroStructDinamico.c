@@ -42,15 +42,15 @@ if (ptr == NULL){
             fprintf(stderr,"Valores incorretos");
             return 1;
         }
+        getchar();
     }
 
 for (size_t i = 0; i < qntCadastro; i++)
 {
-    printf("Nome %d: %s\n", i+1, (ptr+i)->nome);
-    printf("Idade: %d", (ptr+i)->idade);
+    printf("\nNome %d: %s", i+1, (ptr+i)->nome);
+    printf("Idade: %d\n", (ptr+i)->idade);
 }
-
-
+ 
 
     return 0;
 }
