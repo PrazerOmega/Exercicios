@@ -14,7 +14,7 @@ typedef struct
 } Pessoa;
 
 
-void orderAlfa(char *name1, char *name2, int qnt);
+void orderAlfa(Pessoa *pessoa, int qnt);
 
 int main(void){
 
@@ -46,7 +46,7 @@ for (size_t i = 0; i < qntPessoas; i++)
     getchar();
 }
 
-
+    orderAlfa(user, qntPessoas);
 
     for(int i = 0;i < qntPessoas; i++){
         printf("\n\nNome da pessoa %d: %s\n", i+1,(user+i)->nome);
@@ -58,13 +58,21 @@ for (size_t i = 0; i < qntPessoas; i++)
 }
 
 
-void orderAlfa(char *name1, char *name2, int qnt){
+void orderAlfa(Pessoa *pessoa, int qnt){
 
     for (size_t i = 0; i < qnt -1 ; i++)
     {
-        for (size_t j = 0; j < qnt; j++)
+        for (size_t j = i+1; j < qnt; j++)
         {
-            if((strcmp))
+            if (strcmp(pessoa[i].nome,pessoa[j].nome) > 0)
+            {
+                Pessoa temp = pessoa[i];
+                pessoa[i] = pessoa[j];
+                pessoa[j] = temp;
+
+            }
+            
         }
         
     }
+}
