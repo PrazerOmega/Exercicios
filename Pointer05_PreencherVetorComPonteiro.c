@@ -14,24 +14,25 @@ int main(void){
         return 1;
     }
     
-    printf("Digite o numeros:\n");
+    printf("Digite os numeros:\n");
 
     for (size_t i = 0; i < 5; i++)
     {
-        if(scanf("%d", vet[i]) != 1 || vet[i] < 0){
+        if(scanf("%d", vet + i) != 1 || vet + i < 0){
             fprintf(stderr,"Valores invalidos!");
             return 1;
         }else{
-         total += vet[i];
+         getchar();
+         total += *(vet+i);
         }
     }
 
     for (size_t i = 0; i < 5; i++)
     {
-        printf("%d: %d\n", i+1, vet[i]);
+        printf("%d: %d\n", i+1, *(vet+i));
     }
     
-    
+    printf("A soma e : %d", total);
 
 
     return 0;
